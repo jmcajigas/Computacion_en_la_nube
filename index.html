@@ -22,7 +22,7 @@
     <div class="p-3 border border-primary rounded m-3 ">
       <h1>Subir archivo CSV</h1>
       <input type="file" id="csvFile" accept=".csv" />
-      <button onclick="uploadCSV()">Subir</button>
+      <button type="button" class="btn btn-primary" onclick="uploadCSV()">Subir</button>
       <p id="status"></p>
     </div>
     <div class="p-3">
@@ -37,6 +37,7 @@
           <label>Fecha Final</label>
           <input id="datepickerFinal" width="276" />
         </div>
+        <button type="button" class="btn btn-primary" onclick="getDataByDates()">Buscar</button>
       </div>
 
       <table class="table">
@@ -70,7 +71,7 @@
     format: 'yyyy-mm-dd'
   });
 
-  document.addEventListener('DOMContentLoaded', function() { 
+  document.addEventListener('DOMContentLoaded', function () {
     initialLoad()
   });
 </script>
